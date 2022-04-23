@@ -75,7 +75,15 @@ public class Bill
 								
 								} 
 							// Prepare the html table to be displayed
-							output = "<table border='1'><tr><th>Bill ID</th><th>Name</th>" +
+							output ="<html>"
+					
+				  +"<head>"
+				  +"<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">"	
+				  +"</head>"
+				  
+				  +"<body>" 
+									
+									+"<table border='0.1' class='table'><tr><th>Bill ID</th><th>Name</th>" +
 									"<th>Address</th>" + 
 									"<th>Units Consumed</th>" +
 									"<th>Unit Price</th>" +
@@ -113,7 +121,9 @@ public class Bill
 							} 
 								con.close(); 
 								// Complete the html table
-								output += "</table>"; 
+								output += "</table>"
+										+"</body>"	
+										   +"</html>";
 						} 
 						catch (Exception e){ 
 									output = "Error while reading the bill."; 
