@@ -70,7 +70,15 @@ public String readUsers(){
 			return "Error while connecting to the database for reading."; 
 		}
 		// Prepare the html table to be displayed
-		output = "<table border='1'><tr><th>userid</th><th>username</th>" +
+//Added Bootstrap
+		output ="<html> " 
+				+"<head>"
+				  +"<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">"	
+				  +"</head>"
+				  
+				  +"<body>"+ 
+				
+				"<table border='1' class='table'><tr><th>userid</th><th>username</th>" +
 				"<th>password</th>" +
 				"<th>address</th>" +
 				"<th>contactno</th>" +
